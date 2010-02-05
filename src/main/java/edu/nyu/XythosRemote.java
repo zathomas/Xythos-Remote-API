@@ -3,8 +3,6 @@ package edu.nyu;
 import java.util.Collection;
 import java.util.Map;
 
-import javax.jcr.query.RowIterator;
-
 public interface XythosRemote {
 	
 	/**
