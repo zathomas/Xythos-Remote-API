@@ -1,6 +1,8 @@
 package edu.nyu;
 
+import java.io.InputStream;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 public interface XythosRemote {
@@ -29,5 +31,21 @@ public interface XythosRemote {
 	Collection<Map<String, String>> findFilesWithXPath(String xpathQuery, String userId);
 	
 	Map<String,String> getProperties();
+	
+	byte[] getFileContent(String path, String userId);
+	
+	String getContentType(String path, String userId);
+	
+	long getContentLength(String path, String userId);
+	
+	String getContentUri(String path, String userId);
+	
+	Map<String, Object> getFileProperties(String path, String userId);
+	
+	XythosDocument getDocument(String path, String userId);
+	
+	List<String> doSearch(Map<String, Object> searchProperties, String userId);
+	
+	void updateFile(String path, byte[] fileData, Map<String, Object>properties, String userId);
 
 }
