@@ -47,5 +47,9 @@ public interface XythosRemote {
 	List<String> doSearch(Map<String, Object> searchProperties, String userId);
 	
 	void updateFile(String path, byte[] fileData, Map<String, Object>properties, String userId);
+	
+	void addMember(String groupId, String userId);
+	
+	void createGroup(String groupId, String userId);
 
 }
